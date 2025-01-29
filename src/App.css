@@ -1,13 +1,14 @@
 @media screen and (max-width: 400px) {
-  #features {
+  /* #features {
     padding: 20px;
     width: 111%;
-  }
+  } */
   #about,
   #services,
-  #testimonials,
-  #team,
+  /* #testimonials, */
+  /* #team, */
   #contact,
+  #donation,
   #footer {
     width: 111%;
   }

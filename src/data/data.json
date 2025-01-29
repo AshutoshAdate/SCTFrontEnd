@@ -4,7 +4,7 @@
     "paragraph": "Krishnay Vasudevay Haraye Parmatmane Pranatah Kleshnashay Govinday Namo namaha"
   },
   "About": {
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "paragraph": "Sri Chintamani Trust – A Divine Journey of Faith and Devotion\n\nWelcome to Sri Chintamani Trust, a sacred initiative dedicated to preserving and promoting spirituality, tradition, and service. Rooted in deep devotion, our temple trust aims to create a spiritual sanctuary for devotees seeking divine blessings and inner peace.\n\nOur trust is committed to maintaining and enhancing the glory of Sri Chintamani Temple, fostering a divine atmosphere where devotees can offer prayers, participate in rituals, and immerse themselves in the sacred traditions of Sanatana Dharma. We conduct daily poojas, special festivals, annadanam (food donation), and various charitable activities to serve the community and uphold our rich cultural heritage.\n\nThrough this website, we provide updates on temple events, spiritual discourses, and ways for devotees to contribute to the temple’s growth and welfare. We welcome devotees to join us in our mission of spreading faith, devotion, and selfless service. Your participation and support help us sustain the sanctity of the temple and continue our philanthropic efforts.\n\nMay Sri Chintamani bless you with peace, prosperity, and spiritual fulfillment. Join us in this divine journey and stay connected with our sacred trust.\n\nVisit us regularly for updates on temple activities and spiritual guidance. Jai Sri Chintamani!",
     "Why": [
       "Lorem ipsum dolor",
       "Tempor incididunt",
@@ -20,51 +20,40 @@
   },
   "Gallery": [
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/01-large.jpg",
-      "smallImage": "img/portfolio/01-small.jpg"
+      "title": "View",
+      "largeImage": "img/temple/Img/IMG20241011142425.jpg",
+      "smallImage": "img/temple/Img/IMG20241011142425.jpg"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/02-large.jpg",
-      "smallImage": "img/portfolio/02-small.jpg"
+      "title": "View",
+      "largeImage": "img/temple/Img/IMG20241011140214.jpg",
+      "smallImage": "img/temple/Img/IMG20241011140214.jpg"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/03-large.jpg",
-      "smallImage": "img/portfolio/03-small.jpg"
-    },
+      "title": "View",
+      "largeImage": "img/temple/Img/IMG20241011104511.jpg",
+      "smallImage": "img/temple/Img/IMG20241011104511.jpg"
+    } ,
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/04-large.jpg",
-      "smallImage": "img/portfolio/04-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/05-large.jpg",
-      "smallImage": "img/portfolio/05-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/06-large.jpg",
-      "smallImage": "img/portfolio/06-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/07-large.jpg",
-      "smallImage": "img/portfolio/07-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/08-large.jpg",
-      "smallImage": "img/portfolio/08-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/09-large.jpg",
-      "smallImage": "img/portfolio/09-small.jpg"
+      "title": "View",
+      "largeImage": "img/temple/Img/IMG20241011125344.jpg",
+      "smallImage": "img/temple/Img/IMG20241011125344.jpg"
     }
   ],
+  "Donation": {
+    "BankDetails": {
+      "BankName": "",
+      "AccountName": "",
+      "AccountNumber": "",
+      "IFSCCode": ""
+    }
+  },
+  "BankDetails": {
+    "Name": "Bank of Baroda",
+    "AccountName": "Sri Chintamani Trust",
+    "AccountNumber": "74620200001400",
+    "IFSCCode": "BARB0VJKRBA"
+  },
   "Services": [
     {
       "icon": "fa fa-wordpress",
@@ -152,9 +141,9 @@
     }
   ],
   "Contact": {
-    "address": "4321 California St, San Francisco, CA 12345 ",
-    "phone": "+1 123 456 1234",
-    "email": "info@company.com",
+    "address": "Mahadevi Temple, Kanakapura, Karnataka 562117 ",
+    "phone": "+91 9845780800",
+    "email": "admin@srichintamanitrust.com",
     "facebook": "fb.com",
     "twitter": "twitter.com",
     "youtube": "youtube.com"
