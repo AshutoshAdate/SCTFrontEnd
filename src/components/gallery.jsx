@@ -8,24 +8,50 @@ export const Gallery = (props) => {
         <div className="section-title">
           <h2>Gallery</h2>
           <p>
-           Bhumipujan & Temple Milestones
+            Bhumipujan & Temple Milestones
           </p>
         </div>
         <div className="row">
           <div className="portfolio-items">
             {props.data
-              ? props.data.map((d, i) => (
-                  <div
-                    key={`${d.title}-${i}`}
-                    className="col-sm-6 col-md-4 col-lg-4"
-                  >
-                    <Image
-                      title={d.title}
-                      largeImage={d.largeImage}
-                      smallImage={d.smallImage}
-                    />
-                  </div>
-                ))
+              ? props.data.Temple.map((d, i) => (
+                <div
+                  key={`${d.title}-${i}`}
+                  className="col-sm-6 col-md-4 col-lg-4"
+                >
+                  <Image
+                    title={d.title}
+                    largeImage={d.largeImage}
+                    smallImage={d.smallImage}
+                  />
+                </div>
+              ))
+              : "Loading..."}
+          </div>
+        </div>
+      </div>
+      <div className="container">
+        <div className="section-title">
+          {/* <h2>Gallery</h2> */}
+          <p>
+            Constructions
+          </p>
+        </div>
+        <div className="row">
+          <div className="portfolio-items">
+            {props.data
+              ? props.data.Construction.map((d, i) => (
+                <div
+                  key={`${d.title}-${i}`}
+                  className="col-sm-6 col-md-4 col-lg-4"
+                >
+                  <Image
+                    title={d.title}
+                    largeImage={d.largeImage}
+                    smallImage={d.smallImage}
+                  />
+                </div>
+              ))
               : "Loading..."}
           </div>
         </div>

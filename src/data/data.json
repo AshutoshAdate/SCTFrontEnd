@@ -18,7 +18,7 @@
       "Lorem ipsum dolor"
     ]
   },
-  "Gallery": [
+  "Gallery1": [
     {
       "title": "View",
       "largeImage": "img/temple/Img/IMG20241011142425.jpg",
@@ -33,13 +33,64 @@
       "title": "View",
       "largeImage": "img/temple/Img/IMG20241011104511.jpg",
       "smallImage": "img/temple/Img/IMG20241011104511.jpg"
-    } ,
+    },
     {
       "title": "View",
       "largeImage": "img/temple/Img/IMG20241011125344.jpg",
       "smallImage": "img/temple/Img/IMG20241011125344.jpg"
     }
   ],
+  "Gallery": {
+    "Temple": [
+      {
+        "title": "View",
+        "largeImage": "img/temple/Img/IMG20241011142425.jpg",
+        "smallImage": "img/temple/Img/IMG20241011142425.jpg"
+      },
+      {
+        "title": "View",
+        "largeImage": "img/temple/Img/IMG20241011140214.jpg",
+        "smallImage": "img/temple/Img/IMG20241011140214.jpg"
+      },
+      {
+        "title": "View",
+        "largeImage": "img/temple/Img/IMG20241011104511.jpg",
+        "smallImage": "img/temple/Img/IMG20241011104511.jpg"
+      },
+      {
+        "title": "View",
+        "largeImage": "img/temple/Img/IMG20241011125344.jpg",
+        "smallImage": "img/temple/Img/IMG20241011125344.jpg"
+      }
+    ],
+    "Construction": [
+      {
+        "title": "View",
+        "largeImage": "img/temple/Img/IMG_0014.jpeg",
+        "smallImage": "img/temple/Img/IMG_0014.jpeg"
+      },
+      {
+        "title": "View",
+        "largeImage": "img/temple/Img/IMG_0017.jpeg",
+        "smallImage": "img/temple/Img/IMG_0017.jpeg"
+      },
+      {
+        "title": "View",
+        "largeImage": "img/temple/Img/IMG_0018.jpeg",
+        "smallImage": "img/temple/Img/IMG_0018.jpeg"
+      },
+      {
+        "title": "View",
+        "largeImage": "img/temple/Img/IMG_9997.jpeg",
+        "smallImage": "img/temple/Img/IMG_9997.jpeg"
+      },
+      {
+        "title": "View",
+        "largeImage": "img/temple/Img/IMG_0015.jpeg",
+        "smallImage": "img/temple/Img/IMG_0015.jpeg"
+      }
+    ]
+  },
   "Donation": {
     "BankDetails": {
       "BankName": "",
