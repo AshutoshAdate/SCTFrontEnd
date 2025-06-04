@@ -1,39 +1,48 @@
-import { useState } from "react";
-// import emailjs from "emailjs-com";
-// import React from "react";
+import { useEffect, useState } from "react";
+import httpReq, { setLoaderCallback } from "../Utilities/httpReq"
+
 
 const initialState = {
   name: "",
+  phone: "",
   email: "",
   message: "",
 };
 export const Contact = (props) => {
-  const [{ name, email, message }, setState] = useState(initialState);
+  const [{ name, phone, email, message }, setState] = useState(initialState);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setLoaderCallback(setIsLoading);
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setState((prevState) => ({ ...prevState, [name]: value }));
   };
   const clearState = () => setState({ ...initialState });
-  
-    
-  const handleSubmit = (e) => {
+
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(name, email, message);
-    
-    {/* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ }
-    
-    // emailjs
-    //   .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //       clearState();
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+
+    try {
+      const response = await httpReq.post("/ContactUs/addusercontact", {
+        contactName: name,
+        contactEmail: email,
+        phone: phone,
+        contactMessage: message,
+      });
+      if (response?.status == 200 || response?.data?.success) {
+        clearState();
+      } else {
+        console.log("Error sending message")
+      }
+
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Failed to send message.");
+    }
   };
   return (
     <div>
@@ -58,6 +67,22 @@ export const Contact = (props) => {
                         name="name"
                         className="form-control"
                         placeholder="Name"
+                        value={name}
+                        required
+                        onChange={handleChange}
+                      />
+                      <p className="help-block text-danger"></p>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <input
+                        type="text"
+                        id="phone"
+                        name="phone"
+                        className="form-control"
+                        placeholder="phone"
+                        value={phone}
                         required
                         onChange={handleChange}
                       />
@@ -72,6 +97,7 @@ export const Contact = (props) => {
                         name="email"
                         className="form-control"
                         placeholder="Email"
+                        value={email}
                         required
                         onChange={handleChange}
                       />
@@ -86,14 +112,16 @@ export const Contact = (props) => {
                     className="form-control"
                     rows="4"
                     placeholder="Message"
+                    value={message}
                     required
                     onChange={handleChange}
                   ></textarea>
                   <p className="help-block text-danger"></p>
                 </div>
                 <div id="success"></div>
-                <button type="submit" className="btn btn-custom btn-lg">
-                  Send Message
+                <button type="submit" className="btn btn-custom btn-lg" disabled={isLoading}>
+                  {isLoading ? (<>
+                    <i className="fa fa-spinner fa-spin"></i>Sending....</>) : ("Send Message")}
                 </button>
               </form>
             </div>
@@ -140,7 +168,7 @@ export const Contact = (props) => {
                     </a>
                   </li>
                   <li>
-                    <a href={props.data ? props.data.youtube : "/"}>
+                    <a href={props.data ? props.data.youtube : "/"} target="_blank">
                       <i className="fa fa-youtube"></i>
                     </a>
                   </li>
