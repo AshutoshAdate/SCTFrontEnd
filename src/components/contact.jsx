@@ -25,12 +25,12 @@ export const Contact = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    debugger;
     try {
       const response = await httpReq.post("/ContactUs/addusercontact", {
         contactName: name,
         contactEmail: email,
-        phone: phone,
+        contact: phone,
         contactMessage: message,
       });
       if (response?.status == 200 || response?.data?.success) {

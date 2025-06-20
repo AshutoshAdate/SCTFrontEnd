@@ -1,0 +1,72 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  background-color: #f4f6f8;
+
+}
+
+.dashboard-content {
+  margin-left: 220px;
+  padding: 30px;
+  width: 100%;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+
+
+  flex: 1;
+  padding: 2rem;
+  overflow-x: auto
+}
+
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-table th,
+.contact-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.contact-table th {
+  background-color: #007bff;
+  color: white;
+  text-align: left;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.logout-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .dashboard-content {
+    padding: 1rem;
+  }
+}

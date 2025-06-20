@@ -1,44 +1,65 @@
 import React, { useState, useEffect } from "react";
+import { jwtDecode } from 'jwt-decode';
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { Login } from "./components/admin/login";
+import JsonData from "./data/data.json";
 import { Navigation } from "./components/navigation";
 import { Header } from "./components/header";
-// import { Features } from "./components/features";
 import { About } from "./components/about";
 import { Services } from "./components/services";
 import { Gallery } from "./components/gallery";
-// import { Testimonials } from "./components/testimonials";
-// import { Team } from "./components/Team";
 import { Donation } from "./components/donation";
-import {Progress} from "./components/progress";
 import { Contact } from "./components/contact";
-import JsonData from "./data/data.json";
-import SmoothScroll from "smooth-scroll";
-import "./App.css";
+import { AdminDashboard } from "./components/admin/adminDashboard"
+// import { ToastContainer } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
-export const scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 1000,
-  speedAsDuration: true,
-});
+
+const MainContent = ({ data }) => (
+
+  <>
+    {/* <ToastContainer /> */}
+    <Navigation />
+    <Header data={data.Header} />
+    <About data={data.About} />
+    <Services data={data.Services} />
+    <Gallery data={data.Gallery} />
+    <Donation data={data.BankDetails} />
+    <Contact data={data.Contact} />
+  </>
+
+);
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState({});
+
   useEffect(() => {
     setLandingPageData(JsonData);
   }, []);
 
+  const isAdmin = () => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      const decoded = jwtDecode(token);
+      const roleClaim = decoded.role;
+      const role = decoded.role
+      return token && role === 'admin';
+    }
+
+  };
+
   return (
-    <div>
-      <Navigation />
-      <Header data={landingPageData.Header} />
-      {/* <Features data={landingPageData.Features} /> */}
-      <About data={landingPageData.About} />
-      <Services data={landingPageData.Services} />
-      <Gallery data={landingPageData.Gallery} />
-      <Donation data={landingPageData.BankDetails} />
-      {/* <Progress data={landingPageData.BankDetails} /> */}
-      {/* <Testimonials data={landingPageData.Testimonials} /> */}
-      {/* <Team data={landingPageData.Team} /> */}
-      <Contact data={landingPageData.Contact} />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/admin/login" element={<Login />} />
+        <Route path="/" element={<MainContent data={landingPageData} />} />
+        <Route path="*" element={<div>404 Not Found</div>} />
+        <Route
+          path="/admin/dashboard"
+          element={isAdmin() ? <AdminDashboard /> : <Navigate to="/admin/login" />}
+        />
+      </Routes>
+    </Router>
   );
 };
 

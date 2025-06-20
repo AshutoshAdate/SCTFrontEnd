@@ -7,12 +7,12 @@ let setGlobalLoading = null;
 export const setLoaderCallback = (callBack) => {
     setGlobalLoading = callBack;
 }
-
+const BearerToekn = localStorage.getItem("token");
 const httpReq = axios.create({
     baseURL: config.apiBaseUrl,
     headers: {
         "Content-Type": "application/json",
-        // "Access-Control-Allow-Origin": config.localClientUrl,
+        "Authorization": `Bearer ${BearerToekn}`
     },
 });
 
